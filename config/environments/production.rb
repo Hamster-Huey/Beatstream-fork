@@ -5,7 +5,7 @@ Beatstream::Application.configure do
   config.serve_static_assets = true
 
   config.assets.compress = true
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.digest = true
   config.assets.initialize_on_precompile = false
   config.assets.precompile += %w(login.css)

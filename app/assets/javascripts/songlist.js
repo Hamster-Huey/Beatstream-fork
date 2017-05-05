@@ -413,10 +413,6 @@
 		this.grid.invalidate();
 		this.grid.render();
     };
-
-	Songlist.prototype.init = function() {
-		this.grid.init();
-	};
 	
     Songlist.prototype.setFilter = function (filter) {
         this.dataView.setFilterArgs({

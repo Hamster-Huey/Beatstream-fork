@@ -50,11 +50,13 @@
             rowHeight: 22
         };
 
-        var dataView = new Slick.Data.DataView();
+        var dataView = new Slick.Data.DataView({ inlineFilters: true });
         var grid = new Slick.Grid("#slickgrid", dataView, columns, options);
         grid.setSelectionModel(new Slick.RowSelectionModel());
 
         // remove 'path' column
+        grid.setColumns(columns.slice(0, -1));
+
 
         // events:
 
@@ -401,21 +403,21 @@
 
     Songlist.prototype.loadData = function (data) {
         // initialize data view model
-
         this.dataView.beginUpdate();
         this.dataView.setItems(data);
+        this.dataView.setFilterArgs({
+            searchString: ''
+        });
+        this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
-		
-		console.log(this.dataView.getItems());
-		
 		this.grid.updateRowCount();
+		console.log(dataView.getItems());
+		this.grid.invalidateAllRows();
+        this.grid.render();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
-		this.grid.invalidateAllRows();
-		this.grid.invalidate();
-		this.grid.render();
     };
-	
+
     Songlist.prototype.setFilter = function (filter) {
         this.dataView.setFilterArgs({
             searchString: filter
@@ -424,4 +426,5 @@
     };
 
     window.Songlist = Songlist;
+
 })(jQuery, window, document);

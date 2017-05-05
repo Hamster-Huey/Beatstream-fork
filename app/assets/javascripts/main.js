@@ -22,6 +22,7 @@ $(document).ready(function () {
       songlist: songlist
     }), document.getElementById('app'));
   };
+  reactRender();
 
   var songlist = new Songlist({
     onPlay: function (song) {
@@ -34,8 +35,6 @@ $(document).ready(function () {
       reactRender();
     }
   });
-
-  reactRender();
 
   App.Mediator.subscribe(MediatorEvents.AUDIO_STOPPED, function () {
     songlist.nextSong(getShuffle(), getRepeat());
@@ -59,18 +58,16 @@ $(document).ready(function () {
 
   // Load songs
   App.API.getAllMusic().then(function (data) {
-    console.log(data);
-	App.songsLoaded = true;
+    App.songsLoaded = true;
     App.songs = data;
     songlist.loadData(data);
+
     reactRender();
-	
+
     // update song counts
     var count = commify( parseInt( data.length, 10 ) );
     $('.page-header .count').text(count);
-     console.log('Found ' + count + ' songs');
-	
-	
+
     // update count text
     $('.page-header .text').html(data.length == 1 ? 'song' : 'songs');
   }, function fail(xhr, status, error) {
@@ -115,6 +112,4 @@ $(document).ready(function () {
   function getRepeat() {
     return storeGet('repeat');
   }
-  
-  reactRender();
 });

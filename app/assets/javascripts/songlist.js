@@ -410,7 +410,8 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
-
+		this.grid.updateRowCount();
+        this.grid.render();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
     };

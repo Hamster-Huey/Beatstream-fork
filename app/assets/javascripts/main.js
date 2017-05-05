@@ -22,6 +22,7 @@ $(document).ready(function () {
       songlist: songlist
     }), document.getElementById('app'));
   };
+
   reactRender();
 
   var songlist = new Songlist({
@@ -63,7 +64,7 @@ $(document).ready(function () {
     App.songs = data;
     songlist.loadData(data);
     console.log(songlist);
-    //reactRender();
+    reactRender();
 	
     // update song counts
     var count = commify( parseInt( data.length, 10 ) );
@@ -115,4 +116,6 @@ $(document).ready(function () {
   function getRepeat() {
     return storeGet('repeat');
   }
+  
+  reactRender();
 });

@@ -21,6 +21,8 @@ $(document).ready(function () {
       songs: App.songs,
       songlist: songlist
     }), document.getElementById('app'));
+	
+	songlist.init();
   };
 
   var songlist = new Songlist({
@@ -64,12 +66,10 @@ $(document).ready(function () {
     App.songs = data;
     songlist.loadData(data);
     reactRender();
-	
     // update song counts
     var count = commify( parseInt( data.length, 10 ) );
     $('.page-header .count').text(count);
      console.log('Found ' + count + ' songs');
-	
 	
     // update count text
     $('.page-header .text').html(data.length == 1 ? 'song' : 'songs');

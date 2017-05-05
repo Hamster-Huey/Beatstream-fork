@@ -401,7 +401,6 @@
 
     Songlist.prototype.loadData = function (data) {
         // initialize data view model
-		this.grid.init();
 
         this.dataView.beginUpdate();
         this.dataView.setItems(data);
@@ -417,9 +416,12 @@
 		this.grid.invalidate();
 		this.grid.invalidateAllRows();
 		this.grid.render();
-
     };
 
+	Songlist.prototype.init = function() {
+		this.grid.init();
+	};
+	
     Songlist.prototype.setFilter = function (filter) {
         this.dataView.setFilterArgs({
             searchString: filter

@@ -376,7 +376,6 @@
         this.myFilter = myFilter;
 
         this.grid = grid;
-		this.grid.init();
         this.dataView = dataView;
     }
 
@@ -402,6 +401,8 @@
 
     Songlist.prototype.loadData = function (data) {
         // initialize data view model
+		this.grid.init();
+
         this.dataView.beginUpdate();
         this.dataView.setItems(data);
         this.dataView.setFilterArgs({

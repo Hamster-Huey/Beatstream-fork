@@ -55,8 +55,6 @@
         grid.setSelectionModel(new Slick.RowSelectionModel());
 
         // remove 'path' column
-        grid.setColumns(columns.slice(0, -1));
-
 
         // events:
 
@@ -410,6 +408,7 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
+		this.grid.invalidate();
 		this.grid.updateRowCount();
         this.grid.render();
         this.dataView.syncGridSelection(this.grid, false);

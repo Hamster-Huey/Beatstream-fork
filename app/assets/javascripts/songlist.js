@@ -408,6 +408,7 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
+		console.log(this.dataView);
 		this.grid.invalidate();
 		this.grid.updateRowCount();
         this.grid.render();

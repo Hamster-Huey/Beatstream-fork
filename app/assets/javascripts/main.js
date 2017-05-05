@@ -58,7 +58,8 @@ $(document).ready(function () {
 
   // Load songs
   App.API.getAllMusic().then(function (data) {
-    App.songsLoaded = true;
+    console.log(data);
+	App.songsLoaded = true;
     App.songs = data;
     songlist.loadData(data);
 
@@ -67,12 +68,16 @@ $(document).ready(function () {
     // update song counts
     var count = commify( parseInt( data.length, 10 ) );
     $('.page-header .count').text(count);
-
+     console.log('Found ' + count + ' songs');
+	
+	
     // update count text
     $('.page-header .text').html(data.length == 1 ? 'song' : 'songs');
   }, function fail(xhr, status, error) {
     console.log('Failed to fetch songs');
     console.log(xhr, status, error);
+	
+    reactRender();
   });
 
 

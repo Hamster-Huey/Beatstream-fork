@@ -23,8 +23,6 @@ $(document).ready(function () {
     }), document.getElementById('app'));
   };
 
-  reactRender();
-
   var songlist = new Songlist({
     onPlay: function (song) {
       var uri = App.API.getSongURI(song);
@@ -36,6 +34,8 @@ $(document).ready(function () {
       reactRender();
     }
   });
+
+  reactRender();
 
   App.Mediator.subscribe(MediatorEvents.AUDIO_STOPPED, function () {
     songlist.nextSong(getShuffle(), getRepeat());

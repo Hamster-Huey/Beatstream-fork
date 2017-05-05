@@ -50,7 +50,7 @@
             rowHeight: 22
         };
 
-        var dataView = new Slick.Data.DataView({ inlineFilters: true });
+        var dataView = new Slick.Data.DataView();
         var grid = new Slick.Grid("#slickgrid", dataView, columns, options);
         grid.setSelectionModel(new Slick.RowSelectionModel());
 
@@ -408,7 +408,6 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
-		console.log(this.dataView);
 		this.grid.invalidate();
 		this.grid.updateRowCount();
         this.grid.render();

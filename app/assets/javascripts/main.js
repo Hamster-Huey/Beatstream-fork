@@ -21,8 +21,6 @@ $(document).ready(function () {
       songs: App.songs,
       songlist: songlist
     }), document.getElementById('app'));
-	
-	songlist.init();
   };
 
   var songlist = new Songlist({

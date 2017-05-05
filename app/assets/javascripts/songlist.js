@@ -404,17 +404,13 @@
 
         this.dataView.beginUpdate();
         this.dataView.setItems(data);
-        this.dataView.setFilterArgs({
-            searchString: ''
-        });
-        this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
 		
 		this.grid.updateRowCount();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
-		this.grid.invalidate();
 		this.grid.invalidateAllRows();
+		this.grid.invalidate();
 		this.grid.render();
     };
 

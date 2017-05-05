@@ -406,6 +406,8 @@
         this.dataView.setItems(data);
         this.dataView.endUpdate();
 		
+		console.log(this.dataView.getItems());
+		
 		this.grid.updateRowCount();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');

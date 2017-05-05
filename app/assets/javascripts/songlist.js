@@ -413,6 +413,8 @@
         this.grid.render();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
+		this.grid.invalidate();
+		this.grid.invalidateAllRows();
     };
 
     Songlist.prototype.setFilter = function (filter) {

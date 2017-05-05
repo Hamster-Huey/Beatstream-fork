@@ -63,8 +63,8 @@ $(document).ready(function () {
     App.songs = data;
     songlist.loadData(data);
     console.log(songlist);
-    reactRender();
-
+    //reactRender();
+	
     // update song counts
     var count = commify( parseInt( data.length, 10 ) );
     $('.page-header .count').text(count);
@@ -76,8 +76,6 @@ $(document).ready(function () {
   }, function fail(xhr, status, error) {
     console.log('Failed to fetch songs');
     console.log(xhr, status, error);
-	
-    reactRender();
   });
 
 

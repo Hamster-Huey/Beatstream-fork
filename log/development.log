@@ -1,0 +1,176 @@
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (21.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "hashed_password" varchar(255), "salt" varchar(255), "lastfm_session_key" varchar(255), "lastfm_username" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (14.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (14.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120312194635')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120312194635)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 172.17.0.1 at 2017-05-04 23:59:27 +0000
+Connecting to database specified by database.yml
+Processing by MainController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (4.2ms)
+Compiled slick.grid.css  (1ms)  (pid 388)
+Compiled jquery_ui/jquery-ui-custom-theme.css  (1ms)  (pid 388)
+Compiled jquery.fancybox.css  (1ms)  (pid 388)
+Compiled vendor.css  (77ms)  (pid 388)
+Compiled application.css  (474ms)  (pid 388)
+Compiled jquery.js  (2ms)  (pid 388)
+Compiled jquery-ui-1.8.17.custom.min.js  (1ms)  (pid 388)
+Compiled react.js  (7ms)  (pid 388)
+Compiled audio-modules/html5audio.js  (0ms)  (pid 388)
+Compiled soundmanager2/soundmanager2-nodebug.js  (2ms)  (pid 388)
+Compiled mediator.min.js  (0ms)  (pid 388)
+Compiled lib/mediator.js  (51ms)  (pid 388)
+Compiled lib/mediator_events.js  (0ms)  (pid 388)
+Compiled audio-modules/soundmanager2.js  (148ms)  (pid 388)
+Compiled components/current_song.js  (241ms)  (pid 388)
+Compiled components/settings_modal.js  (114ms)  (pid 388)
+Compiled components/user_panel.js  (256ms)  (pid 388)
+Compiled components/header.js  (400ms)  (pid 388)
+Compiled jquery.cookie.js  (0ms)  (pid 388)
+Compiled store.min.js  (0ms)  (pid 388)
+Compiled lib/audio.js  (2ms)  (pid 388)
+Compiled components/playback_controls.js  (133ms)  (pid 388)
+Compiled components/volume.js  (101ms)  (pid 388)
+Compiled components/player_time.js  (101ms)  (pid 388)
+Compiled components/seekbar.js  (100ms)  (pid 388)
+Compiled components/player_options.js  (103ms)  (pid 388)
+Compiled components/player.js  (1959ms)  (pid 388)
+Compiled lib/utils.js  (1ms)  (pid 388)
+Compiled components/playlist_header.js  (150ms)  (pid 388)
+Compiled components/preloader.js  (92ms)  (pid 388)
+Compiled components/sidebar.js  (93ms)  (pid 388)
+Compiled components/main.js  (2525ms)  (pid 388)
+Compiled dragtooltip.js  (0ms)  (pid 388)
+Compiled lib/api.js  (0ms)  (pid 388)
+Compiled lib/key_codes.js  (0ms)  (pid 388)
+Compiled lib/jquery_onenter.js  (39ms)  (pid 388)
+Compiled lib/lastfm.js  (1ms)  (pid 388)
+Compiled jquery.ba-hashchange.min.js  (0ms)  (pid 388)
+Compiled slick.grid/jquery.event.drag-2.0.min.js  (0ms)  (pid 388)
+Compiled slick.grid/plugins/slick.rowselectionmodel.js  (0ms)  (pid 388)
+Compiled slick.grid/slick.core.js  (0ms)  (pid 388)
+Compiled slick.grid/slick.dataview.js  (1ms)  (pid 388)
+Compiled slick.grid/slick.grid.js  (1ms)  (pid 388)
+Compiled slick.grid.js  (180ms)  (pid 388)
+Compiled songlist.js  (2ms)  (pid 388)
+Compiled main.js  (289ms)  (pid 388)
+Compiled playlists.js  (1ms)  (pid 388)
+Compiled application.js  (4145ms)  (pid 388)
+Completed 200 OK in 4801.6ms (Views: 4774.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/songs" for 172.17.0.1 at 2017-05-04 23:59:33 +0000
+Processing by ApiV1::SongsController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Songs JSON last modified on 2017-05-04 23:59:33 +0000
+Songs JSON last modified on 2017-05-04 23:59:33 +0000
+Songs JSON last modified on 2017-05-04 23:59:33 +0000
+  Rendered text template (0.0ms)
+Completed 200 OK in 19.2ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 172.17.0.1 at 2017-05-04 23:59:45 +0000
+Processing by ApiV1::SongsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Songs JSON last modified on 2017-05-04 23:59:33 +0000
+Songs JSON last modified on 2017-05-04 23:59:45 +0000
+Songs JSON last modified on 2017-05-04 23:59:45 +0000
+  Rendered text template (0.0ms)
+Completed 200 OK in 6.5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/songs/refresh" for 172.17.0.1 at 2017-05-04 23:59:48 +0000
+Processing by ApiV1::SongsController#refresh as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Songs JSON last modified on 2017-05-04 23:59:48 +0000
+Redirected to http://localhost:3002/
+Completed 302 Found in 6.2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 172.17.0.1 at 2017-05-04 23:59:48 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26.7ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/songs" for 172.17.0.1 at 2017-05-04 23:59:48 +0000
+Processing by ApiV1::SongsController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Songs JSON last modified on 2017-05-04 23:59:48 +0000
+Songs JSON last modified on 2017-05-04 23:59:48 +0000
+Songs JSON last modified on 2017-05-04 23:59:48 +0000
+  Rendered text template (0.0ms)
+Completed 200 OK in 15.1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/songs/play?file=Pokemon.mp3" for 172.17.0.1 at 2017-05-04 23:59:58 +0000
+Processing by ApiV1::SongsController#play as HTML
+  Parameters: {"file"=>"Pokemon.mp3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 10.2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs/play?file=Pokemon.mp3" for 172.17.0.1 at 2017-05-04 23:59:58 +0000
+Processing by ApiV1::SongsController#play as */*
+  Parameters: {"file"=>"Pokemon.mp3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 4.6ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.17.0.1 at 2017-05-05 00:00:16 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22.7ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/songs" for 172.17.0.1 at 2017-05-05 00:00:17 +0000
+Processing by ApiV1::SongsController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Songs JSON last modified on 2017-05-04 23:59:48 +0000
+Songs JSON last modified on 2017-05-05 00:00:17 +0000
+Songs JSON last modified on 2017-05-05 00:00:17 +0000
+  Rendered text template (0.0ms)
+Completed 200 OK in 12.6ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs?refresh=1" for 172.17.0.1 at 2017-05-05 00:00:25 +0000
+
+ActionController::RoutingError (No route matches [GET] "/songs"):
+  actionpack (3.2.22.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.22.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.4) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.4) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.4) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.4) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.22.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.4) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.4) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.4) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-3.2.22.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)

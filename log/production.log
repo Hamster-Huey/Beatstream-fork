@@ -1,3 +1,40 @@
 Connecting to database specified by database.yml
 Migrating to CreateUsers (20120312194635)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Migrating to CreateUsers (20120312194635)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Started GET "/" for 172.17.0.1 at 2017-05-04 23:59:09 +0000
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 36.6ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    12: 
+    13:     <%= stylesheet_link_tag    "application" %>
+    14:     <%= csrf_meta_tags %>
+    15: </head>
+    16: <body>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4257388525235521391_27860480'
+
+
+Started GET "/" for 172.17.0.1 at 2017-05-04 23:59:09 +0000
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 3.8ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    12: 
+    13:     <%= stylesheet_link_tag    "application" %>
+    14:     <%= csrf_meta_tags %>
+    15: </head>
+    16: <body>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4257388525235521391_27860480'
+
+

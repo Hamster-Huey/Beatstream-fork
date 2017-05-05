@@ -411,6 +411,8 @@
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
 
+		console.log(this.dataView.getItems());
+		
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
     };

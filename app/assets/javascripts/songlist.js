@@ -401,7 +401,7 @@
 
     Songlist.prototype.loadData = function (data) {
         // initialize data view model
-//        this.dataView.beginUpdate();
+        this.dataView.beginUpdate();
         this.dataView.setItems(data);
         this.dataView.setFilterArgs({
             searchString: ''
@@ -427,5 +427,5 @@
     };
 
     window.Songlist = Songlist;
-
+	this.grid.init();
 })(jQuery, window, document);

@@ -415,6 +415,8 @@
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
 		this.grid.invalidate();
 		this.grid.invalidateAllRows();
+		this.grid.render();
+
     };
 
     Songlist.prototype.setFilter = function (filter) {

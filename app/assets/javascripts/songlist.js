@@ -376,6 +376,7 @@
         this.myFilter = myFilter;
 
         this.grid = grid;
+		this.grid.init();
         this.dataView = dataView;
     }
 
@@ -408,9 +409,8 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
-		this.grid.invalidate();
+		
 		this.grid.updateRowCount();
-        this.grid.render();
         this.dataView.syncGridSelection(this.grid, false);
         this.dataView.syncGridCellCssStyles(this.grid, 'currentSong_playing');
 		this.grid.invalidate();
@@ -427,5 +427,4 @@
     };
 
     window.Songlist = Songlist;
-	this.grid.init();
 })(jQuery, window, document);

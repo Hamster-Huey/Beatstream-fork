@@ -61,7 +61,7 @@ $(document).ready(function () {
     App.songsLoaded = true;
     App.songs = data;
     songlist.loadData(data);
-
+    this.setState(this.state);
     reactRender();
 
     // update song counts

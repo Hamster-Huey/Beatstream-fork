@@ -410,7 +410,11 @@
         });
         this.dataView.setFilter(this.myFilter);
         this.dataView.endUpdate();
-
+		this.dataView.refresh();
+		
+		this.grid.updateRowCount();
+		this.grid.render();
+		
 		console.log(this.dataView.getItems());
 		
         this.dataView.syncGridSelection(this.grid, false);
